@@ -160,11 +160,29 @@
   .nb-shadow-lg {
     box-shadow: 6px 6px 0px 0px var(--foreground);
   }
+  .nb-shadow-xl {
+    box-shadow: 8px 8px 0px 0px var(--foreground);
+  }
   .nb-shadow-primary {
     box-shadow: 4px 4px 0px 0px var(--primary);
   }
+  .nb-shadow-primary-lg {
+    box-shadow: 6px 6px 0px 0px var(--primary);
+  }
   .nb-shadow-secondary {
     box-shadow: 4px 4px 0px 0px var(--secondary);
+  }
+  .nb-shadow-secondary-lg {
+    box-shadow: 6px 6px 0px 0px var(--secondary);
+  }
+  .nb-shadow-accent-lg {
+    box-shadow: 6px 6px 0px 0px var(--accent);
+  }
+  .nb-shadow-success-lg {
+    box-shadow: 6px 6px 0px 0px var(--success);
+  }
+  .nb-shadow-none {
+    box-shadow: 0px 0px 0px 0px transparent;
   }
   .nb-border {
     border: 2px solid var(--border);
@@ -172,12 +190,31 @@
   .nb-border-thick {
     border: 3px solid var(--border);
   }
+  /* 按下：向右下平移，阴影收缩 */
   .nb-press:active {
-    transform: translate(3px, 3px);
-    box-shadow: 1px 1px 0px 0px var(--foreground);
+    transform: translate(4px, 4px);
+    box-shadow: 0px 0px 0px 0px var(--foreground);
   }
   .nb-press-sm:active {
     transform: translate(2px, 2px);
     box-shadow: 1px 1px 0px 0px var(--foreground);
   }
+  /* 彩色描边脉冲环 */
+  .nb-ring-primary:focus-visible {
+    outline: 3px solid var(--primary);
+    outline-offset: 2px;
+  }
+  .nb-ring-secondary:focus-visible {
+    outline: 3px solid var(--secondary);
+    outline-offset: 2px;
+  }
+}
+
+/* Glitch 抖动动画 */
+@keyframes glitch {
+  0%   { transform: translate(0, 0); }
+  25%  { transform: translate(-2px, 1px); }
+  50%  { transform: translate(2px, -1px); }
+  75%  { transform: translate(-1px, 2px); }
+  100% { transform: translate(0, 0); }
 }

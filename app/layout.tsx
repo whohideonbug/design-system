@@ -15,8 +15,8 @@ const spaceMono = Space_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Neo Brutalism Design System',
-  description: 'Neo Brutalism 设计系统组件展示 — Button & Card',
+  title: 'Design System Showcase',
+  description: '多风格设计系统组件展示 — Neo Brutalism / Default / Glassmorphism / Neumorphism',
   generator: 'v0.app',
   icons: {
     icon: [

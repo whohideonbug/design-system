@@ -3,11 +3,23 @@
 
 @custom-variant dark (&:is(.dark *));
 
-:root {
-  /* Neo Brutalism 色彩系统 */
-  --background: oklch(0.97 0.01 90);        /* 米白纸张色 */
-  --foreground: oklch(0.08 0 0);            /* 近黑 */
-  --card: oklch(1 0 0);                     /* 纯白卡片 */
+/* ═══════════════════════════════════════════════════════════════════════════
+   Design System Variants
+   ═══════════════════════════════════════════════════════════════════════════ */
+@custom-variant ds-neo (&:is([data-design="neo-brutalism"] *));
+@custom-variant ds-default (&:is([data-design="default"] *));
+@custom-variant ds-glass (&:is([data-design="glassmorphism"] *));
+@custom-variant ds-neumorphism (&:is([data-design="neumorphism"] *));
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   NEO BRUTALISM THEME (Default)
+   ═══════════════════════════════════════════════════════════════════════════ */
+:root,
+[data-design="neo-brutalism"] {
+  /* 色彩系统 */
+  --background: oklch(0.97 0.01 90);
+  --foreground: oklch(0.08 0 0);
+  --card: oklch(1 0 0);
   --card-foreground: oklch(0.08 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.08 0 0);
@@ -39,9 +51,6 @@
   --ring: oklch(0.84 0.2 95);
   --radius: 0rem;
 
-  /* 偏移阴影距离 */
-  --shadow-offset: 4px;
-
   --chart-1: oklch(0.84 0.2 95);
   --chart-2: oklch(0.56 0.22 255);
   --chart-3: oklch(0.63 0.22 25);
@@ -55,9 +64,146 @@
   --sidebar-accent-foreground: oklch(1 0 0);
   --sidebar-border: oklch(0.3 0 0);
   --sidebar-ring: oklch(0.84 0.2 95);
+
+  /* Shadow / 新拟态专用 */
+  --shadow-dark: rgba(0, 0, 0, 0.15);
+  --shadow-light: rgba(255, 255, 255, 0.8);
 }
 
-.dark {
+/* ═══════════════════════════════════════════════════════════════════════════
+   DEFAULT THEME (shadcn/ui 风格)
+   ═══════════════════════════════════════════════════════════════════════════ */
+[data-design="default"] {
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+
+  --primary: oklch(0.205 0 0);
+  --primary-foreground: oklch(0.985 0 0);
+
+  --secondary: oklch(0.97 0 0);
+  --secondary-foreground: oklch(0.205 0 0);
+
+  --accent: oklch(0.97 0 0);
+  --accent-foreground: oklch(0.205 0 0);
+
+  --success: oklch(0.72 0.18 160);
+  --success-foreground: oklch(0.08 0 0);
+
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: oklch(0.556 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.985 0 0);
+
+  --border: oklch(0.922 0 0);
+  --input: oklch(0.922 0 0);
+  --ring: oklch(0.708 0 0);
+  --radius: 0.5rem;
+
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+
+  --shadow-dark: rgba(0, 0, 0, 0.1);
+  --shadow-light: rgba(255, 255, 255, 1);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   GLASSMORPHISM THEME (玻璃拟态)
+   ═══════════════════════════════════════════════════════════════════════════ */
+[data-design="glassmorphism"] {
+  --background: oklch(0.95 0.02 260);
+  --foreground: oklch(0.15 0.02 260);
+  --card: oklch(1 0 0 / 0.6);
+  --card-foreground: oklch(0.15 0.02 260);
+  --popover: oklch(1 0 0 / 0.7);
+  --popover-foreground: oklch(0.15 0.02 260);
+
+  --primary: oklch(0.55 0.25 270);
+  --primary-foreground: oklch(1 0 0);
+
+  --secondary: oklch(0.7 0.18 200);
+  --secondary-foreground: oklch(0.1 0 0);
+
+  --accent: oklch(0.75 0.2 320);
+  --accent-foreground: oklch(0.1 0 0);
+
+  --success: oklch(0.72 0.18 160);
+  --success-foreground: oklch(0.08 0 0);
+
+  --muted: oklch(0.92 0.01 260);
+  --muted-foreground: oklch(0.45 0.02 260);
+  --destructive: oklch(0.6 0.22 25);
+  --destructive-foreground: oklch(1 0 0);
+
+  --border: oklch(0.8 0.02 260 / 0.3);
+  --input: oklch(0.8 0.02 260 / 0.3);
+  --ring: oklch(0.55 0.25 270);
+  --radius: 1rem;
+
+  --chart-1: oklch(0.55 0.25 270);
+  --chart-2: oklch(0.7 0.18 200);
+  --chart-3: oklch(0.75 0.2 320);
+  --chart-4: oklch(0.72 0.18 160);
+  --chart-5: oklch(0.8 0.15 60);
+
+  --shadow-dark: rgba(100, 100, 150, 0.15);
+  --shadow-light: rgba(255, 255, 255, 0.7);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   NEUMORPHISM THEME (新拟态)
+   ═══════════════════════════════════════════════════════════════════════════ */
+[data-design="neumorphism"] {
+  --background: oklch(0.93 0.01 250);
+  --foreground: oklch(0.3 0.02 250);
+  --card: oklch(0.93 0.01 250);
+  --card-foreground: oklch(0.3 0.02 250);
+  --popover: oklch(0.93 0.01 250);
+  --popover-foreground: oklch(0.3 0.02 250);
+
+  --primary: oklch(0.55 0.2 250);
+  --primary-foreground: oklch(1 0 0);
+
+  --secondary: oklch(0.88 0.02 250);
+  --secondary-foreground: oklch(0.35 0.02 250);
+
+  --accent: oklch(0.65 0.18 200);
+  --accent-foreground: oklch(1 0 0);
+
+  --success: oklch(0.65 0.15 160);
+  --success-foreground: oklch(1 0 0);
+
+  --muted: oklch(0.9 0.01 250);
+  --muted-foreground: oklch(0.5 0.02 250);
+  --destructive: oklch(0.6 0.2 25);
+  --destructive-foreground: oklch(1 0 0);
+
+  --border: oklch(0.88 0.01 250);
+  --input: oklch(0.88 0.01 250);
+  --ring: oklch(0.55 0.2 250);
+  --radius: 1rem;
+
+  --chart-1: oklch(0.55 0.2 250);
+  --chart-2: oklch(0.65 0.18 200);
+  --chart-3: oklch(0.65 0.15 160);
+  --chart-4: oklch(0.7 0.15 40);
+  --chart-5: oklch(0.6 0.2 320);
+
+  --shadow-dark: rgba(166, 176, 195, 0.5);
+  --shadow-light: rgba(255, 255, 255, 0.8);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   DARK MODE VARIANTS
+   ═══════════════════════════════════════════════════════════════════════════ */
+.dark,
+[data-design="neo-brutalism"].dark {
   --background: oklch(0.12 0 0);
   --foreground: oklch(0.97 0.01 90);
   --card: oklch(0.17 0 0);
@@ -79,24 +225,17 @@
   --border: oklch(0.97 0.01 90);
   --input: oklch(0.97 0.01 90);
   --ring: oklch(0.84 0.2 95);
-  --chart-1: oklch(0.84 0.2 95);
-  --chart-2: oklch(0.56 0.22 255);
-  --chart-3: oklch(0.63 0.22 25);
-  --chart-4: oklch(0.72 0.18 160);
-  --chart-5: oklch(0.7 0.2 330);
-  --sidebar: oklch(0.08 0 0);
-  --sidebar-foreground: oklch(0.97 0.01 90);
-  --sidebar-primary: oklch(0.84 0.2 95);
-  --sidebar-primary-foreground: oklch(0.08 0 0);
-  --sidebar-accent: oklch(0.56 0.22 255);
-  --sidebar-accent-foreground: oklch(1 0 0);
-  --sidebar-border: oklch(0.3 0 0);
-  --sidebar-ring: oklch(0.84 0.2 95);
+
+  --shadow-dark: rgba(0, 0, 0, 0.5);
+  --shadow-light: rgba(50, 50, 50, 0.3);
 }
 
+/* ═══════════════════════════════════════════════════════════════════════════
+   THEME INLINE MAPPINGS
+   ═══════════════════════════════════════════════════════════════════════════ */
 @theme inline {
-  --font-sans: 'Geist', 'Geist Fallback';
-  --font-mono: 'Geist Mono', 'Geist Mono Fallback';
+  --font-sans: 'Space Grotesk', 'Geist', 'Geist Fallback', system-ui, sans-serif;
+  --font-mono: 'Space Mono', 'Geist Mono', 'Geist Mono Fallback', monospace;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -133,13 +272,13 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
-}
-
-@theme inline {
   --color-success: var(--success);
   --color-success-foreground: var(--success-foreground);
 }
 
+/* ═══════════════════════════════════════════════════════════════════════════
+   BASE STYLES
+   ═══════════════════════════════════════════════════════════════════════════ */
 @layer base {
   * {
     @apply border-border outline-ring/50;
@@ -149,7 +288,9 @@
   }
 }
 
-/* Neo Brutalism 工具类 */
+/* ═══════════════════════════════════════════════════════════════════════════
+   NEO BRUTALISM UTILITIES
+   ═══════════════════════════════════════════════════════════════════════════ */
 @layer utilities {
   .nb-shadow {
     box-shadow: 4px 4px 0px 0px var(--foreground);
@@ -190,7 +331,6 @@
   .nb-border-thick {
     border: 3px solid var(--border);
   }
-  /* 按下：向右下平移，阴影收缩 */
   .nb-press:active {
     transform: translate(4px, 4px);
     box-shadow: 0px 0px 0px 0px var(--foreground);
@@ -199,7 +339,6 @@
     transform: translate(2px, 2px);
     box-shadow: 1px 1px 0px 0px var(--foreground);
   }
-  /* 彩色描边脉冲环 */
   .nb-ring-primary:focus-visible {
     outline: 3px solid var(--primary);
     outline-offset: 2px;
@@ -207,6 +346,27 @@
   .nb-ring-secondary:focus-visible {
     outline: 3px solid var(--secondary);
     outline-offset: 2px;
+  }
+
+  /* Neumorphism utilities */
+  .neu-shadow {
+    box-shadow: 6px 6px 12px var(--shadow-dark), -6px -6px 12px var(--shadow-light);
+  }
+  .neu-shadow-sm {
+    box-shadow: 4px 4px 8px var(--shadow-dark), -4px -4px 8px var(--shadow-light);
+  }
+  .neu-shadow-inset {
+    box-shadow: inset 4px 4px 8px var(--shadow-dark), inset -4px -4px 8px var(--shadow-light);
+  }
+
+  /* Glassmorphism utilities */
+  .glass-bg {
+    background: var(--card);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+  .glass-border {
+    border: 1px solid var(--border);
   }
 }
 

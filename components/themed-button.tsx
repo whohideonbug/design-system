@@ -19,7 +19,6 @@ const sizeStyles = {
   lg: "px-7 py-3.5 text-lg gap-2.5",
 }
 
-// 变体背景色映射（所有主题通用）
 const variantBg: Record<ButtonVariant, string> = {
   primary: "bg-primary text-primary-foreground",
   secondary: "bg-secondary text-secondary-foreground",
@@ -72,6 +71,44 @@ export function ThemedButton({
         "ds-neumorphism:active:shadow-[inset_3px_3px_6px_var(--shadow-dark),inset_-3px_-3px_6px_var(--shadow-light)]",
         variant === "ghost" && "ds-neumorphism:bg-background",
 
+        // ═══ Violet Bloom ═══
+        "ds-violet:rounded-xl ds-violet:border ds-violet:border-border",
+        "ds-violet:shadow-md ds-violet:hover:shadow-lg ds-violet:hover:shadow-primary/20",
+        "ds-violet:hover:-translate-y-0.5 ds-violet:active:translate-y-0",
+        variant === "ghost" && "ds-violet:hover:bg-primary/10",
+
+        // ═══ Bubblegum ═══
+        "ds-bubblegum:rounded-full ds-bubblegum:border-2 ds-bubblegum:border-border",
+        "ds-bubblegum:shadow-md ds-bubblegum:hover:shadow-lg",
+        "ds-bubblegum:hover:scale-105 ds-bubblegum:active:scale-95",
+        variant === "ghost" && "ds-bubblegum:hover:bg-primary/10",
+
+        // ═══ Modern Minimal ═══
+        "ds-minimal:rounded-sm ds-minimal:border ds-minimal:border-border",
+        "ds-minimal:font-medium ds-minimal:tracking-wide",
+        "ds-minimal:hover:bg-foreground ds-minimal:hover:text-background",
+        "ds-minimal:active:scale-[0.98]",
+        variant === "ghost" && "ds-minimal:hover:bg-muted ds-minimal:hover:text-foreground",
+
+        // ═══ Soft Pop ═══
+        "ds-softpop:rounded-2xl ds-softpop:border ds-softpop:border-border/50",
+        "ds-softpop:shadow-sm ds-softpop:hover:shadow-md",
+        "ds-softpop:hover:-translate-y-0.5 ds-softpop:active:translate-y-0",
+        variant === "ghost" && "ds-softpop:hover:bg-primary/10",
+
+        // ═══ Cosmic Night ═══
+        "ds-cosmic:rounded-lg ds-cosmic:border ds-cosmic:border-border",
+        "ds-cosmic:shadow-[0_0_10px_var(--primary)] ds-cosmic:hover:shadow-[0_0_20px_var(--primary)]",
+        "ds-cosmic:hover:scale-[1.02] ds-cosmic:active:scale-[0.98]",
+        variant === "ghost" && "ds-cosmic:bg-card/50 ds-cosmic:hover:bg-card/80",
+
+        // ═══ Vintage Paper ═══
+        "ds-vintage:rounded-md ds-vintage:border-2 ds-vintage:border-border",
+        "ds-vintage:shadow-sm ds-vintage:hover:shadow-md",
+        "ds-vintage:font-serif ds-vintage:tracking-wide",
+        "ds-vintage:hover:-translate-y-0.5 ds-vintage:active:translate-y-0",
+        variant === "ghost" && "ds-vintage:hover:bg-primary/10",
+
         className,
       )}
       {...props}
@@ -112,9 +149,8 @@ export function ThemedButtonShowcase() {
         <h2 className={cn(
           "text-2xl font-black tracking-tight text-foreground",
           "ds-neo:uppercase",
-          "ds-default:font-semibold ds-default:tracking-normal",
-          "ds-glass:font-semibold ds-glass:tracking-normal",
-          "ds-neumorphism:font-semibold ds-neumorphism:tracking-normal",
+          "ds-minimal:font-light ds-minimal:tracking-widest",
+          "ds-vintage:font-serif",
         )}>
           Button 按钮
         </h2>
@@ -126,6 +162,7 @@ export function ThemedButtonShowcase() {
         <h3 className={cn(
           "text-sm font-bold text-muted-foreground",
           "ds-neo:uppercase ds-neo:tracking-widest ds-neo:font-mono",
+          "ds-minimal:font-light ds-minimal:tracking-[0.2em]",
         )}>
           按钮变体
         </h3>
@@ -139,6 +176,18 @@ export function ThemedButtonShowcase() {
           "ds-glass:bg-card/60 ds-glass:backdrop-blur-md ds-glass:border ds-glass:border-border/50 ds-glass:rounded-2xl ds-glass:shadow-lg",
           // Neumorphism
           "ds-neumorphism:rounded-2xl ds-neumorphism:bg-background ds-neumorphism:shadow-[6px_6px_12px_var(--shadow-dark),-6px_-6px_12px_var(--shadow-light)]",
+          // Violet Bloom
+          "ds-violet:rounded-2xl ds-violet:bg-card ds-violet:border ds-violet:border-border ds-violet:shadow-lg",
+          // Bubblegum
+          "ds-bubblegum:rounded-3xl ds-bubblegum:bg-card ds-bubblegum:border-2 ds-bubblegum:border-border ds-bubblegum:shadow-lg",
+          // Modern Minimal
+          "ds-minimal:rounded-none ds-minimal:bg-card ds-minimal:border ds-minimal:border-border",
+          // Soft Pop
+          "ds-softpop:rounded-3xl ds-softpop:bg-card ds-softpop:border ds-softpop:border-border/50 ds-softpop:shadow-md",
+          // Cosmic Night
+          "ds-cosmic:rounded-xl ds-cosmic:bg-card ds-cosmic:border ds-cosmic:border-border ds-cosmic:shadow-[0_0_15px_var(--primary)]",
+          // Vintage Paper
+          "ds-vintage:rounded-lg ds-vintage:bg-card ds-vintage:border-2 ds-vintage:border-border ds-vintage:shadow-md",
         )}>
           {BUTTON_DEMOS.map((item, i) => (
             <ThemedButton
@@ -158,6 +207,7 @@ export function ThemedButtonShowcase() {
         <h3 className={cn(
           "text-sm font-bold text-muted-foreground",
           "ds-neo:uppercase ds-neo:tracking-widest ds-neo:font-mono",
+          "ds-minimal:font-light ds-minimal:tracking-[0.2em]",
         )}>
           按钮尺寸
         </h3>
@@ -167,6 +217,12 @@ export function ThemedButtonShowcase() {
           "ds-default:border ds-default:border-border ds-default:rounded-lg ds-default:bg-card ds-default:shadow-sm",
           "ds-glass:bg-card/60 ds-glass:backdrop-blur-md ds-glass:border ds-glass:border-border/50 ds-glass:rounded-2xl ds-glass:shadow-lg",
           "ds-neumorphism:rounded-2xl ds-neumorphism:bg-background ds-neumorphism:shadow-[6px_6px_12px_var(--shadow-dark),-6px_-6px_12px_var(--shadow-light)]",
+          "ds-violet:rounded-2xl ds-violet:bg-card ds-violet:border ds-violet:border-border ds-violet:shadow-lg",
+          "ds-bubblegum:rounded-3xl ds-bubblegum:bg-card ds-bubblegum:border-2 ds-bubblegum:border-border ds-bubblegum:shadow-lg",
+          "ds-minimal:rounded-none ds-minimal:bg-card ds-minimal:border ds-minimal:border-border",
+          "ds-softpop:rounded-3xl ds-softpop:bg-card ds-softpop:border ds-softpop:border-border/50 ds-softpop:shadow-md",
+          "ds-cosmic:rounded-xl ds-cosmic:bg-card ds-cosmic:border ds-cosmic:border-border ds-cosmic:shadow-[0_0_15px_var(--primary)]",
+          "ds-vintage:rounded-lg ds-vintage:bg-card ds-vintage:border-2 ds-vintage:border-border ds-vintage:shadow-md",
         )}>
           {SIZE_DEMOS.map((item, i) => (
             <ThemedButton key={i} size={item.size} icon={<Zap size={item.size === "lg" ? 20 : 16} />}>
@@ -181,6 +237,7 @@ export function ThemedButtonShowcase() {
         <h3 className={cn(
           "text-sm font-bold text-muted-foreground",
           "ds-neo:uppercase ds-neo:tracking-widest ds-neo:font-mono",
+          "ds-minimal:font-light ds-minimal:tracking-[0.2em]",
         )}>
           成功状态
         </h3>
@@ -190,6 +247,12 @@ export function ThemedButtonShowcase() {
           "ds-default:border ds-default:border-border ds-default:rounded-lg ds-default:bg-card ds-default:shadow-sm",
           "ds-glass:bg-card/60 ds-glass:backdrop-blur-md ds-glass:border ds-glass:border-border/50 ds-glass:rounded-2xl ds-glass:shadow-lg",
           "ds-neumorphism:rounded-2xl ds-neumorphism:bg-background ds-neumorphism:shadow-[6px_6px_12px_var(--shadow-dark),-6px_-6px_12px_var(--shadow-light)]",
+          "ds-violet:rounded-2xl ds-violet:bg-card ds-violet:border ds-violet:border-border ds-violet:shadow-lg",
+          "ds-bubblegum:rounded-3xl ds-bubblegum:bg-card ds-bubblegum:border-2 ds-bubblegum:border-border ds-bubblegum:shadow-lg",
+          "ds-minimal:rounded-none ds-minimal:bg-card ds-minimal:border ds-minimal:border-border",
+          "ds-softpop:rounded-3xl ds-softpop:bg-card ds-softpop:border ds-softpop:border-border/50 ds-softpop:shadow-md",
+          "ds-cosmic:rounded-xl ds-cosmic:bg-card ds-cosmic:border ds-cosmic:border-border ds-cosmic:shadow-[0_0_15px_var(--primary)]",
+          "ds-vintage:rounded-lg ds-vintage:bg-card ds-vintage:border-2 ds-vintage:border-border ds-vintage:shadow-md",
         )}>
           <ThemedButton variant="success" icon={<Check size={16} />}>
             提交成功

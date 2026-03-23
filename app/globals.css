@@ -10,47 +10,40 @@
 @custom-variant ds-default (&:is([data-design="default"] *));
 @custom-variant ds-glass (&:is([data-design="glassmorphism"] *));
 @custom-variant ds-neumorphism (&:is([data-design="neumorphism"] *));
+@custom-variant ds-violet (&:is([data-design="violet-bloom"] *));
+@custom-variant ds-bubblegum (&:is([data-design="bubblegum"] *));
+@custom-variant ds-minimal (&:is([data-design="modern-minimal"] *));
+@custom-variant ds-softpop (&:is([data-design="soft-pop"] *));
+@custom-variant ds-cosmic (&:is([data-design="cosmic-night"] *));
+@custom-variant ds-vintage (&:is([data-design="vintage-paper"] *));
 
 /* ═══════════════════════════════════════════════════════════════════════════
    NEO BRUTALISM THEME (Default)
    ═══════════════════════════════════════════════════════════════════════════ */
 :root,
 [data-design="neo-brutalism"] {
-  /* 色彩系统 */
   --background: oklch(0.97 0.01 90);
   --foreground: oklch(0.08 0 0);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.08 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.08 0 0);
-
-  /* 主色：明黄 */
   --primary: oklch(0.84 0.2 95);
   --primary-foreground: oklch(0.08 0 0);
-
-  /* 次色：亮蓝 */
   --secondary: oklch(0.56 0.22 255);
   --secondary-foreground: oklch(1 0 0);
-
-  /* 强调：珊瑚红 */
   --accent: oklch(0.63 0.22 25);
   --accent-foreground: oklch(1 0 0);
-
-  /* 薄荷绿 */
   --success: oklch(0.72 0.18 160);
   --success-foreground: oklch(0.08 0 0);
-
   --muted: oklch(0.93 0.01 90);
   --muted-foreground: oklch(0.45 0 0);
   --destructive: oklch(0.55 0.25 27);
   --destructive-foreground: oklch(1 0 0);
-
-  /* Neo Brutalism 特征：粗边框、无圆角 */
   --border: oklch(0.08 0 0);
   --input: oklch(0.08 0 0);
   --ring: oklch(0.84 0.2 95);
   --radius: 0rem;
-
   --chart-1: oklch(0.84 0.2 95);
   --chart-2: oklch(0.56 0.22 255);
   --chart-3: oklch(0.63 0.22 25);
@@ -64,14 +57,12 @@
   --sidebar-accent-foreground: oklch(1 0 0);
   --sidebar-border: oklch(0.3 0 0);
   --sidebar-ring: oklch(0.84 0.2 95);
-
-  /* Shadow / 新拟态专用 */
   --shadow-dark: rgba(0, 0, 0, 0.15);
   --shadow-light: rgba(255, 255, 255, 0.8);
 }
 
 /* ═══════════════════════════════════════════════════════════════════════════
-   DEFAULT THEME (shadcn/ui 风格)
+   DEFAULT THEME (shadcn/ui)
    ═══════════════════════════════════════════════════════════════════════════ */
 [data-design="default"] {
   --background: oklch(1 0 0);
@@ -80,41 +71,33 @@
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
-
   --primary: oklch(0.205 0 0);
   --primary-foreground: oklch(0.985 0 0);
-
   --secondary: oklch(0.97 0 0);
   --secondary-foreground: oklch(0.205 0 0);
-
   --accent: oklch(0.97 0 0);
   --accent-foreground: oklch(0.205 0 0);
-
   --success: oklch(0.72 0.18 160);
   --success-foreground: oklch(0.08 0 0);
-
   --muted: oklch(0.97 0 0);
   --muted-foreground: oklch(0.556 0 0);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.985 0 0);
-
   --border: oklch(0.922 0 0);
   --input: oklch(0.922 0 0);
   --ring: oklch(0.708 0 0);
   --radius: 0.5rem;
-
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
   --chart-4: oklch(0.828 0.189 84.429);
   --chart-5: oklch(0.769 0.188 70.08);
-
   --shadow-dark: rgba(0, 0, 0, 0.1);
   --shadow-light: rgba(255, 255, 255, 1);
 }
 
 /* ═══════════════════════════════════════════════════════════════════════════
-   GLASSMORPHISM THEME (玻璃拟态)
+   GLASSMORPHISM THEME
    ═══════════════════════════════════════════════════════════════════════════ */
 [data-design="glassmorphism"] {
   --background: oklch(0.95 0.02 260);
@@ -123,41 +106,33 @@
   --card-foreground: oklch(0.15 0.02 260);
   --popover: oklch(1 0 0 / 0.7);
   --popover-foreground: oklch(0.15 0.02 260);
-
   --primary: oklch(0.55 0.25 270);
   --primary-foreground: oklch(1 0 0);
-
   --secondary: oklch(0.7 0.18 200);
   --secondary-foreground: oklch(0.1 0 0);
-
   --accent: oklch(0.75 0.2 320);
   --accent-foreground: oklch(0.1 0 0);
-
   --success: oklch(0.72 0.18 160);
   --success-foreground: oklch(0.08 0 0);
-
   --muted: oklch(0.92 0.01 260);
   --muted-foreground: oklch(0.45 0.02 260);
   --destructive: oklch(0.6 0.22 25);
   --destructive-foreground: oklch(1 0 0);
-
   --border: oklch(0.8 0.02 260 / 0.3);
   --input: oklch(0.8 0.02 260 / 0.3);
   --ring: oklch(0.55 0.25 270);
   --radius: 1rem;
-
   --chart-1: oklch(0.55 0.25 270);
   --chart-2: oklch(0.7 0.18 200);
   --chart-3: oklch(0.75 0.2 320);
   --chart-4: oklch(0.72 0.18 160);
   --chart-5: oklch(0.8 0.15 60);
-
   --shadow-dark: rgba(100, 100, 150, 0.15);
   --shadow-light: rgba(255, 255, 255, 0.7);
 }
 
 /* ═══════════════════════════════════════════════════════════════════════════
-   NEUMORPHISM THEME (新拟态)
+   NEUMORPHISM THEME
    ═══════════════════════════════════════════════════════════════════════════ */
 [data-design="neumorphism"] {
   --background: oklch(0.93 0.01 250);
@@ -166,37 +141,239 @@
   --card-foreground: oklch(0.3 0.02 250);
   --popover: oklch(0.93 0.01 250);
   --popover-foreground: oklch(0.3 0.02 250);
-
   --primary: oklch(0.55 0.2 250);
   --primary-foreground: oklch(1 0 0);
-
   --secondary: oklch(0.88 0.02 250);
   --secondary-foreground: oklch(0.35 0.02 250);
-
   --accent: oklch(0.65 0.18 200);
   --accent-foreground: oklch(1 0 0);
-
   --success: oklch(0.65 0.15 160);
   --success-foreground: oklch(1 0 0);
-
   --muted: oklch(0.9 0.01 250);
   --muted-foreground: oklch(0.5 0.02 250);
   --destructive: oklch(0.6 0.2 25);
   --destructive-foreground: oklch(1 0 0);
-
   --border: oklch(0.88 0.01 250);
   --input: oklch(0.88 0.01 250);
   --ring: oklch(0.55 0.2 250);
   --radius: 1rem;
-
   --chart-1: oklch(0.55 0.2 250);
   --chart-2: oklch(0.65 0.18 200);
   --chart-3: oklch(0.65 0.15 160);
   --chart-4: oklch(0.7 0.15 40);
   --chart-5: oklch(0.6 0.2 320);
-
   --shadow-dark: rgba(166, 176, 195, 0.5);
   --shadow-light: rgba(255, 255, 255, 0.8);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   VIOLET BLOOM THEME
+   ═══════════════════════════════════════════════════════════════════════════ */
+[data-design="violet-bloom"] {
+  --background: oklch(0.96 0.03 290);
+  --foreground: oklch(0.2 0.05 290);
+  --card: oklch(0.98 0.02 290);
+  --card-foreground: oklch(0.2 0.05 290);
+  --popover: oklch(0.98 0.02 290);
+  --popover-foreground: oklch(0.2 0.05 290);
+  --primary: oklch(0.55 0.25 290);
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.7 0.18 320);
+  --secondary-foreground: oklch(0.15 0 0);
+  --accent: oklch(0.6 0.22 260);
+  --accent-foreground: oklch(1 0 0);
+  --success: oklch(0.65 0.2 160);
+  --success-foreground: oklch(1 0 0);
+  --muted: oklch(0.92 0.02 290);
+  --muted-foreground: oklch(0.45 0.03 290);
+  --destructive: oklch(0.55 0.22 25);
+  --destructive-foreground: oklch(1 0 0);
+  --border: oklch(0.85 0.05 290);
+  --input: oklch(0.85 0.05 290);
+  --ring: oklch(0.55 0.25 290);
+  --radius: 0.75rem;
+  --chart-1: oklch(0.55 0.25 290);
+  --chart-2: oklch(0.7 0.18 320);
+  --chart-3: oklch(0.6 0.22 260);
+  --chart-4: oklch(0.65 0.2 160);
+  --chart-5: oklch(0.75 0.15 30);
+  --shadow-dark: rgba(120, 80, 160, 0.15);
+  --shadow-light: rgba(255, 255, 255, 0.9);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   BUBBLEGUM THEME
+   ═══════════════════════════════════════════════════════════════════════════ */
+[data-design="bubblegum"] {
+  --background: oklch(0.97 0.03 350);
+  --foreground: oklch(0.25 0.05 350);
+  --card: oklch(1 0.01 350);
+  --card-foreground: oklch(0.25 0.05 350);
+  --popover: oklch(1 0.01 350);
+  --popover-foreground: oklch(0.25 0.05 350);
+  --primary: oklch(0.7 0.2 350);
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.8 0.15 200);
+  --secondary-foreground: oklch(0.2 0 0);
+  --accent: oklch(0.75 0.18 60);
+  --accent-foreground: oklch(0.2 0 0);
+  --success: oklch(0.72 0.18 160);
+  --success-foreground: oklch(0.1 0 0);
+  --muted: oklch(0.94 0.02 350);
+  --muted-foreground: oklch(0.5 0.03 350);
+  --destructive: oklch(0.6 0.22 25);
+  --destructive-foreground: oklch(1 0 0);
+  --border: oklch(0.88 0.06 350);
+  --input: oklch(0.88 0.06 350);
+  --ring: oklch(0.7 0.2 350);
+  --radius: 1.25rem;
+  --chart-1: oklch(0.7 0.2 350);
+  --chart-2: oklch(0.8 0.15 200);
+  --chart-3: oklch(0.75 0.18 60);
+  --chart-4: oklch(0.72 0.18 160);
+  --chart-5: oklch(0.65 0.2 290);
+  --shadow-dark: rgba(220, 100, 150, 0.15);
+  --shadow-light: rgba(255, 255, 255, 0.95);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   MODERN MINIMAL THEME
+   ═══════════════════════════════════════════════════════════════════════════ */
+[data-design="modern-minimal"] {
+  --background: oklch(0.995 0 0);
+  --foreground: oklch(0.15 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.15 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.15 0 0);
+  --primary: oklch(0.15 0 0);
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.96 0 0);
+  --secondary-foreground: oklch(0.2 0 0);
+  --accent: oklch(0.92 0 0);
+  --accent-foreground: oklch(0.15 0 0);
+  --success: oklch(0.5 0.15 160);
+  --success-foreground: oklch(1 0 0);
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: oklch(0.5 0 0);
+  --destructive: oklch(0.55 0.2 25);
+  --destructive-foreground: oklch(1 0 0);
+  --border: oklch(0.9 0 0);
+  --input: oklch(0.9 0 0);
+  --ring: oklch(0.15 0 0);
+  --radius: 0.25rem;
+  --chart-1: oklch(0.15 0 0);
+  --chart-2: oklch(0.4 0 0);
+  --chart-3: oklch(0.6 0 0);
+  --chart-4: oklch(0.75 0 0);
+  --chart-5: oklch(0.88 0 0);
+  --shadow-dark: rgba(0, 0, 0, 0.05);
+  --shadow-light: rgba(255, 255, 255, 1);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   SOFT POP THEME
+   ═══════════════════════════════════════════════════════════════════════════ */
+[data-design="soft-pop"] {
+  --background: oklch(0.98 0.01 90);
+  --foreground: oklch(0.25 0.02 90);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.25 0.02 90);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.25 0.02 90);
+  --primary: oklch(0.65 0.18 160);
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.85 0.12 220);
+  --secondary-foreground: oklch(0.2 0 0);
+  --accent: oklch(0.78 0.15 50);
+  --accent-foreground: oklch(0.2 0 0);
+  --success: oklch(0.7 0.16 140);
+  --success-foreground: oklch(1 0 0);
+  --muted: oklch(0.95 0.01 90);
+  --muted-foreground: oklch(0.5 0.02 90);
+  --destructive: oklch(0.62 0.2 25);
+  --destructive-foreground: oklch(1 0 0);
+  --border: oklch(0.9 0.02 90);
+  --input: oklch(0.9 0.02 90);
+  --ring: oklch(0.65 0.18 160);
+  --radius: 0.875rem;
+  --chart-1: oklch(0.65 0.18 160);
+  --chart-2: oklch(0.85 0.12 220);
+  --chart-3: oklch(0.78 0.15 50);
+  --chart-4: oklch(0.7 0.16 140);
+  --chart-5: oklch(0.72 0.15 320);
+  --shadow-dark: rgba(100, 120, 100, 0.1);
+  --shadow-light: rgba(255, 255, 255, 0.95);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   COSMIC NIGHT THEME
+   ═══════════════════════════════════════════════════════════════════════════ */
+[data-design="cosmic-night"] {
+  --background: oklch(0.15 0.03 270);
+  --foreground: oklch(0.92 0.02 270);
+  --card: oklch(0.2 0.04 270);
+  --card-foreground: oklch(0.92 0.02 270);
+  --popover: oklch(0.2 0.04 270);
+  --popover-foreground: oklch(0.92 0.02 270);
+  --primary: oklch(0.7 0.25 320);
+  --primary-foreground: oklch(0.1 0 0);
+  --secondary: oklch(0.55 0.2 200);
+  --secondary-foreground: oklch(1 0 0);
+  --accent: oklch(0.75 0.22 60);
+  --accent-foreground: oklch(0.1 0 0);
+  --success: oklch(0.65 0.2 160);
+  --success-foreground: oklch(0.1 0 0);
+  --muted: oklch(0.25 0.03 270);
+  --muted-foreground: oklch(0.65 0.02 270);
+  --destructive: oklch(0.6 0.25 25);
+  --destructive-foreground: oklch(1 0 0);
+  --border: oklch(0.35 0.05 270);
+  --input: oklch(0.35 0.05 270);
+  --ring: oklch(0.7 0.25 320);
+  --radius: 0.75rem;
+  --chart-1: oklch(0.7 0.25 320);
+  --chart-2: oklch(0.55 0.2 200);
+  --chart-3: oklch(0.75 0.22 60);
+  --chart-4: oklch(0.65 0.2 160);
+  --chart-5: oklch(0.6 0.2 290);
+  --shadow-dark: rgba(0, 0, 0, 0.5);
+  --shadow-light: rgba(100, 80, 150, 0.2);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   VINTAGE PAPER THEME
+   ═══════════════════════════════════════════════════════════════════════════ */
+[data-design="vintage-paper"] {
+  --background: oklch(0.94 0.03 80);
+  --foreground: oklch(0.3 0.05 50);
+  --card: oklch(0.96 0.025 75);
+  --card-foreground: oklch(0.3 0.05 50);
+  --popover: oklch(0.96 0.025 75);
+  --popover-foreground: oklch(0.3 0.05 50);
+  --primary: oklch(0.5 0.12 50);
+  --primary-foreground: oklch(0.96 0.02 75);
+  --secondary: oklch(0.65 0.1 160);
+  --secondary-foreground: oklch(0.96 0.02 75);
+  --accent: oklch(0.55 0.15 25);
+  --accent-foreground: oklch(0.96 0.02 75);
+  --success: oklch(0.55 0.12 140);
+  --success-foreground: oklch(0.96 0.02 75);
+  --muted: oklch(0.9 0.025 80);
+  --muted-foreground: oklch(0.5 0.04 50);
+  --destructive: oklch(0.5 0.15 25);
+  --destructive-foreground: oklch(0.96 0.02 75);
+  --border: oklch(0.75 0.05 60);
+  --input: oklch(0.75 0.05 60);
+  --ring: oklch(0.5 0.12 50);
+  --radius: 0.375rem;
+  --chart-1: oklch(0.5 0.12 50);
+  --chart-2: oklch(0.65 0.1 160);
+  --chart-3: oklch(0.55 0.15 25);
+  --chart-4: oklch(0.55 0.12 140);
+  --chart-5: oklch(0.6 0.1 280);
+  --shadow-dark: rgba(80, 60, 40, 0.15);
+  --shadow-light: rgba(255, 250, 240, 0.8);
 }
 
 /* ═══════════════════════════════════════════════════════════════════════════
@@ -225,7 +402,6 @@
   --border: oklch(0.97 0.01 90);
   --input: oklch(0.97 0.01 90);
   --ring: oklch(0.84 0.2 95);
-
   --shadow-dark: rgba(0, 0, 0, 0.5);
   --shadow-light: rgba(50, 50, 50, 0.3);
 }
@@ -289,9 +465,10 @@
 }
 
 /* ═══════════════════════════════════════════════════════════════════════════
-   NEO BRUTALISM UTILITIES
+   UTILITIES
    ═══════════════════════════════════════════════════════════════════════════ */
 @layer utilities {
+  /* Neo Brutalism */
   .nb-shadow {
     box-shadow: 4px 4px 0px 0px var(--foreground);
   }
@@ -348,7 +525,7 @@
     outline-offset: 2px;
   }
 
-  /* Neumorphism utilities */
+  /* Neumorphism */
   .neu-shadow {
     box-shadow: 6px 6px 12px var(--shadow-dark), -6px -6px 12px var(--shadow-light);
   }
@@ -359,7 +536,7 @@
     box-shadow: inset 4px 4px 8px var(--shadow-dark), inset -4px -4px 8px var(--shadow-light);
   }
 
-  /* Glassmorphism utilities */
+  /* Glassmorphism */
   .glass-bg {
     background: var(--card);
     backdrop-filter: blur(12px);

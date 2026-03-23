@@ -24,7 +24,7 @@ export function DesignSystemSelector() {
   }, [])
 
   return (
-    <div ref={ref} className="relative">
+    <div ref={ref} className="relative z-50">
       <button
         onClick={() => setOpen(!open)}
         className={cn(
@@ -53,7 +53,7 @@ export function DesignSystemSelector() {
       {open && (
         <div
           className={cn(
-            "absolute top-full left-0 mt-2 z-50 min-w-[240px] overflow-hidden",
+            "absolute top-full left-0 mt-2 z-[100] min-w-[240px] overflow-hidden",
             // Neo Brutalism
             "ds-neo:border-2 ds-neo:border-border ds-neo:bg-card ds-neo:shadow-[4px_4px_0px_0px_var(--foreground)]",
             // Default

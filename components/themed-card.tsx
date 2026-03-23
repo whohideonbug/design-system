@@ -32,6 +32,34 @@ function CardContainer({ children, className }: { children: React.ReactNode; cla
         "ds-neumorphism:shadow-[6px_6px_12px_var(--shadow-dark),-6px_-6px_12px_var(--shadow-light)]",
         "ds-neumorphism:hover:shadow-[4px_4px_8px_var(--shadow-dark),-4px_-4px_8px_var(--shadow-light)]",
 
+        // Violet Bloom
+        "ds-violet:border ds-violet:border-border ds-violet:rounded-2xl",
+        "ds-violet:shadow-lg ds-violet:hover:shadow-xl ds-violet:hover:shadow-primary/10",
+        "ds-violet:hover:-translate-y-1",
+
+        // Bubblegum
+        "ds-bubblegum:border-2 ds-bubblegum:border-border ds-bubblegum:rounded-3xl",
+        "ds-bubblegum:shadow-lg ds-bubblegum:hover:shadow-xl",
+        "ds-bubblegum:hover:scale-[1.02]",
+
+        // Modern Minimal
+        "ds-minimal:border ds-minimal:border-border ds-minimal:rounded-sm",
+        "ds-minimal:hover:border-foreground",
+
+        // Soft Pop
+        "ds-softpop:border ds-softpop:border-border/50 ds-softpop:rounded-3xl",
+        "ds-softpop:shadow-md ds-softpop:hover:shadow-lg",
+        "ds-softpop:hover:-translate-y-1",
+
+        // Cosmic Night
+        "ds-cosmic:border ds-cosmic:border-border ds-cosmic:rounded-xl",
+        "ds-cosmic:shadow-[0_0_20px_var(--primary)] ds-cosmic:hover:shadow-[0_0_30px_var(--primary)]",
+
+        // Vintage Paper
+        "ds-vintage:border-2 ds-vintage:border-border ds-vintage:rounded-lg",
+        "ds-vintage:shadow-md ds-vintage:hover:shadow-lg",
+        "ds-vintage:hover:-translate-y-1",
+
         className,
       )}
     >
@@ -51,6 +79,9 @@ export function ThemedCardBasic() {
         "h-2 w-full bg-primary",
         "ds-glass:bg-gradient-to-r ds-glass:from-primary ds-glass:to-accent",
         "ds-neumorphism:bg-gradient-to-r ds-neumorphism:from-primary ds-neumorphism:to-accent",
+        "ds-violet:bg-gradient-to-r ds-violet:from-primary ds-violet:to-secondary",
+        "ds-bubblegum:bg-gradient-to-r ds-bubblegum:from-primary ds-bubblegum:via-accent ds-bubblegum:to-secondary",
+        "ds-cosmic:bg-gradient-to-r ds-cosmic:from-primary ds-cosmic:via-accent ds-cosmic:to-secondary",
       )} />
       <div className="p-6 flex flex-col gap-4">
         <div className="flex items-start justify-between gap-4">
@@ -61,17 +92,27 @@ export function ThemedCardBasic() {
             "ds-default:rounded-md",
             "ds-glass:rounded-full ds-glass:bg-secondary/80",
             "ds-neumorphism:rounded-full",
+            "ds-violet:rounded-full",
+            "ds-bubblegum:rounded-full",
+            "ds-minimal:rounded-none ds-minimal:font-light ds-minimal:tracking-[0.2em]",
+            "ds-softpop:rounded-full",
+            "ds-cosmic:rounded-md",
+            "ds-vintage:rounded-sm ds-vintage:font-serif",
           )}>
             设计系统
           </div>
           <ArrowUpRight size={20} className="text-muted-foreground shrink-0" />
         </div>
         <div className="space-y-2">
-          <h3 className="text-xl font-black leading-tight text-balance">
+          <h3 className={cn(
+            "text-xl font-black leading-tight text-balance",
+            "ds-minimal:font-light ds-minimal:tracking-wide",
+            "ds-vintage:font-serif",
+          )}>
             多风格设计语言
           </h3>
           <p className="text-sm text-muted-foreground leading-relaxed">
-            支持 Neo Brutalism、Default、Glassmorphism、Neumorphism 四种设计风格无缝切换。
+            支持 10 种设计风格无缝切换，满足不同场景的视觉需求。
           </p>
         </div>
         <div className={cn(
@@ -80,6 +121,12 @@ export function ThemedCardBasic() {
           "ds-default:border-border",
           "ds-glass:border-border/30",
           "ds-neumorphism:border-border/30",
+          "ds-violet:border-border/50",
+          "ds-bubblegum:border-border/50",
+          "ds-minimal:border-border",
+          "ds-softpop:border-border/30",
+          "ds-cosmic:border-border/50",
+          "ds-vintage:border-border",
         )}>
           <div className={cn(
             "w-8 h-8 flex items-center justify-center shrink-0",
@@ -88,6 +135,12 @@ export function ThemedCardBasic() {
             "ds-default:rounded-full",
             "ds-glass:rounded-full ds-glass:bg-accent/80",
             "ds-neumorphism:rounded-full",
+            "ds-violet:rounded-full",
+            "ds-bubblegum:rounded-full",
+            "ds-minimal:rounded-none",
+            "ds-softpop:rounded-full",
+            "ds-cosmic:rounded-md",
+            "ds-vintage:rounded-sm",
           )}>
             <User size={14} />
           </div>
@@ -118,6 +171,8 @@ export function ThemedCardStats() {
           <h3 className={cn(
             "text-lg font-black tracking-tight",
             "ds-neo:uppercase",
+            "ds-minimal:font-light ds-minimal:tracking-widest",
+            "ds-vintage:font-serif",
           )}>
             数据总览
           </h3>
@@ -137,6 +192,12 @@ export function ThemedCardStats() {
                 "ds-default:rounded-md",
                 "ds-glass:rounded-lg ds-glass:bg-opacity-80",
                 "ds-neumorphism:rounded-lg",
+                "ds-violet:rounded-lg",
+                "ds-bubblegum:rounded-full",
+                "ds-minimal:rounded-none",
+                "ds-softpop:rounded-xl",
+                "ds-cosmic:rounded-md",
+                "ds-vintage:rounded-sm",
               )}>
                 {s.icon}
               </div>
@@ -155,6 +216,12 @@ export function ThemedCardStats() {
           "ds-default:rounded-md",
           "ds-glass:rounded-xl ds-glass:bg-muted/50 ds-glass:backdrop-blur-sm",
           "ds-neumorphism:rounded-xl ds-neumorphism:shadow-[inset_2px_2px_4px_var(--shadow-dark),inset_-2px_-2px_4px_var(--shadow-light)]",
+          "ds-violet:rounded-xl",
+          "ds-bubblegum:rounded-2xl",
+          "ds-minimal:rounded-none",
+          "ds-softpop:rounded-2xl",
+          "ds-cosmic:rounded-lg",
+          "ds-vintage:rounded-md",
         )}>
           <BarChart3 size={14} className="text-muted-foreground" />
           <p className="text-xs font-bold text-muted-foreground">相比上周增长 +18%</p>
@@ -205,6 +272,8 @@ export function ThemedCardNotification() {
           <h3 className={cn(
             "text-lg font-black tracking-tight",
             "ds-neo:uppercase",
+            "ds-minimal:font-light ds-minimal:tracking-widest",
+            "ds-vintage:font-serif",
           )}>
             通知中心
           </h3>
@@ -215,6 +284,12 @@ export function ThemedCardNotification() {
             "ds-default:rounded-md",
             "ds-glass:rounded-full ds-glass:bg-accent/80",
             "ds-neumorphism:rounded-full",
+            "ds-violet:rounded-full",
+            "ds-bubblegum:rounded-full",
+            "ds-minimal:rounded-none ds-minimal:font-light",
+            "ds-softpop:rounded-full",
+            "ds-cosmic:rounded-md",
+            "ds-vintage:rounded-sm",
           )}>
             2 条未读
           </span>
@@ -226,6 +301,12 @@ export function ThemedCardNotification() {
           "ds-default:divide-border",
           "ds-glass:divide-border/30",
           "ds-neumorphism:divide-border/30",
+          "ds-violet:divide-border/50",
+          "ds-bubblegum:divide-border/50",
+          "ds-minimal:divide-border",
+          "ds-softpop:divide-border/30",
+          "ds-cosmic:divide-border/50",
+          "ds-vintage:divide-border",
         )}>
           {notifications.map((n) => (
             <div
@@ -242,6 +323,12 @@ export function ThemedCardNotification() {
                 "ds-default:rounded-md",
                 "ds-glass:rounded-lg ds-glass:bg-opacity-80",
                 "ds-neumorphism:rounded-lg",
+                "ds-violet:rounded-lg",
+                "ds-bubblegum:rounded-full",
+                "ds-minimal:rounded-none",
+                "ds-softpop:rounded-xl",
+                "ds-cosmic:rounded-md",
+                "ds-vintage:rounded-sm",
               )}>
                 {n.icon}
               </div>
@@ -287,6 +374,30 @@ export function ThemedCardProduct() {
         // Neumorphism
         "ds-neumorphism:rounded-2xl ds-neumorphism:border-none",
         "ds-neumorphism:shadow-[6px_6px_12px_rgba(0,0,0,0.2),-6px_-6px_12px_rgba(255,255,255,0.1)]",
+
+        // Violet Bloom
+        "ds-violet:border ds-violet:border-primary-foreground/20 ds-violet:rounded-2xl",
+        "ds-violet:shadow-xl ds-violet:hover:shadow-2xl ds-violet:hover:-translate-y-1",
+
+        // Bubblegum
+        "ds-bubblegum:border-2 ds-bubblegum:border-primary-foreground/30 ds-bubblegum:rounded-3xl",
+        "ds-bubblegum:shadow-xl ds-bubblegum:hover:shadow-2xl ds-bubblegum:hover:scale-[1.02]",
+
+        // Modern Minimal
+        "ds-minimal:border ds-minimal:border-primary-foreground/20 ds-minimal:rounded-sm",
+        "ds-minimal:hover:border-primary-foreground/50",
+
+        // Soft Pop
+        "ds-softpop:border ds-softpop:border-primary-foreground/20 ds-softpop:rounded-3xl",
+        "ds-softpop:shadow-lg ds-softpop:hover:shadow-xl ds-softpop:hover:-translate-y-1",
+
+        // Cosmic Night
+        "ds-cosmic:border ds-cosmic:border-primary-foreground/30 ds-cosmic:rounded-xl",
+        "ds-cosmic:shadow-[0_0_30px_var(--accent)] ds-cosmic:hover:shadow-[0_0_40px_var(--accent)]",
+
+        // Vintage Paper
+        "ds-vintage:border-2 ds-vintage:border-primary-foreground/30 ds-vintage:rounded-lg",
+        "ds-vintage:shadow-lg ds-vintage:hover:shadow-xl ds-vintage:hover:-translate-y-1",
       )}
     >
       <div className="p-6 space-y-5">
@@ -297,6 +408,12 @@ export function ThemedCardProduct() {
             "ds-default:rounded-md",
             "ds-glass:rounded-full",
             "ds-neumorphism:rounded-full",
+            "ds-violet:rounded-full",
+            "ds-bubblegum:rounded-full",
+            "ds-minimal:rounded-none ds-minimal:font-light ds-minimal:tracking-[0.2em]",
+            "ds-softpop:rounded-full",
+            "ds-cosmic:rounded-md",
+            "ds-vintage:rounded-sm ds-vintage:font-serif",
           )}>
             最受欢迎
           </div>
@@ -307,6 +424,8 @@ export function ThemedCardProduct() {
           <h3 className={cn(
             "text-2xl font-black tracking-tighter",
             "ds-neo:uppercase",
+            "ds-minimal:font-light ds-minimal:tracking-wide",
+            "ds-vintage:font-serif",
           )}>
             Pro 专业版
           </h3>
@@ -325,6 +444,12 @@ export function ThemedCardProduct() {
                 "ds-default:rounded-sm",
                 "ds-glass:rounded-sm",
                 "ds-neumorphism:rounded-sm",
+                "ds-violet:rounded-sm",
+                "ds-bubblegum:rounded-full",
+                "ds-minimal:rounded-none",
+                "ds-softpop:rounded-full",
+                "ds-cosmic:rounded-sm",
+                "ds-vintage:rounded-sm",
               )}>
                 ✓
               </div>
@@ -339,6 +464,12 @@ export function ThemedCardProduct() {
           "ds-default:border-primary-foreground/20",
           "ds-glass:border-primary-foreground/20",
           "ds-neumorphism:border-primary-foreground/20",
+          "ds-violet:border-primary-foreground/20",
+          "ds-bubblegum:border-primary-foreground/20",
+          "ds-minimal:border-primary-foreground/20",
+          "ds-softpop:border-primary-foreground/20",
+          "ds-cosmic:border-primary-foreground/20",
+          "ds-vintage:border-primary-foreground/20",
         )}>
           {["设计", "开发", "团队"].map((tag) => (
             <div key={tag} className={cn(
@@ -347,6 +478,12 @@ export function ThemedCardProduct() {
               "ds-default:rounded-md",
               "ds-glass:rounded-full",
               "ds-neumorphism:rounded-full",
+              "ds-violet:rounded-full",
+              "ds-bubblegum:rounded-full",
+              "ds-minimal:rounded-none",
+              "ds-softpop:rounded-full",
+              "ds-cosmic:rounded-md",
+              "ds-vintage:rounded-sm",
             )}>
               <Tag size={10} />
               {tag}
@@ -375,6 +512,8 @@ export function ThemedCardShowcase() {
           "ds-default:font-semibold ds-default:tracking-normal",
           "ds-glass:font-semibold ds-glass:tracking-normal",
           "ds-neumorphism:font-semibold ds-neumorphism:tracking-normal",
+          "ds-minimal:font-light ds-minimal:tracking-widest",
+          "ds-vintage:font-serif",
         )}>
           Card 卡片
         </h2>
@@ -389,6 +528,12 @@ export function ThemedCardShowcase() {
             "ds-default:border-b ds-default:border-border",
             "ds-glass:border-b ds-glass:border-border/50",
             "ds-neumorphism:border-b ds-neumorphism:border-border/30",
+            "ds-violet:border-b ds-violet:border-border/50",
+            "ds-bubblegum:border-b ds-bubblegum:border-border/50",
+            "ds-minimal:border-b ds-minimal:border-border ds-minimal:font-light ds-minimal:tracking-[0.2em]",
+            "ds-softpop:border-b ds-softpop:border-border/30",
+            "ds-cosmic:border-b ds-cosmic:border-border/50",
+            "ds-vintage:border-b ds-vintage:border-border",
           )}>
             01 / 基础信息卡
           </span>
@@ -402,6 +547,12 @@ export function ThemedCardShowcase() {
             "ds-default:border-b ds-default:border-border",
             "ds-glass:border-b ds-glass:border-border/50",
             "ds-neumorphism:border-b ds-neumorphism:border-border/30",
+            "ds-violet:border-b ds-violet:border-border/50",
+            "ds-bubblegum:border-b ds-bubblegum:border-border/50",
+            "ds-minimal:border-b ds-minimal:border-border ds-minimal:font-light ds-minimal:tracking-[0.2em]",
+            "ds-softpop:border-b ds-softpop:border-border/30",
+            "ds-cosmic:border-b ds-cosmic:border-border/50",
+            "ds-vintage:border-b ds-vintage:border-border",
           )}>
             02 / 统计数据卡
           </span>
@@ -415,6 +566,12 @@ export function ThemedCardShowcase() {
             "ds-default:border-b ds-default:border-border",
             "ds-glass:border-b ds-glass:border-border/50",
             "ds-neumorphism:border-b ds-neumorphism:border-border/30",
+            "ds-violet:border-b ds-violet:border-border/50",
+            "ds-bubblegum:border-b ds-bubblegum:border-border/50",
+            "ds-minimal:border-b ds-minimal:border-border ds-minimal:font-light ds-minimal:tracking-[0.2em]",
+            "ds-softpop:border-b ds-softpop:border-border/30",
+            "ds-cosmic:border-b ds-cosmic:border-border/50",
+            "ds-vintage:border-b ds-vintage:border-border",
           )}>
             03 / 通知提醒卡
           </span>
@@ -428,6 +585,12 @@ export function ThemedCardShowcase() {
             "ds-default:border-b ds-default:border-border",
             "ds-glass:border-b ds-glass:border-border/50",
             "ds-neumorphism:border-b ds-neumorphism:border-border/30",
+            "ds-violet:border-b ds-violet:border-border/50",
+            "ds-bubblegum:border-b ds-bubblegum:border-border/50",
+            "ds-minimal:border-b ds-minimal:border-border ds-minimal:font-light ds-minimal:tracking-[0.2em]",
+            "ds-softpop:border-b ds-softpop:border-border/30",
+            "ds-cosmic:border-b ds-cosmic:border-border/50",
+            "ds-vintage:border-b ds-vintage:border-border",
           )}>
             04 / 产品定价卡
           </span>

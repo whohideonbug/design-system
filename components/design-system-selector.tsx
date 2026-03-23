@@ -44,6 +44,24 @@ export function DesignSystemSelector() {
           "ds-neumorphism:rounded-xl ds-neumorphism:bg-background ds-neumorphism:text-foreground",
           "ds-neumorphism:shadow-[4px_4px_10px_var(--shadow-dark),-4px_-4px_10px_var(--shadow-light)]",
           "ds-neumorphism:hover:shadow-[2px_2px_6px_var(--shadow-dark),-2px_-2px_6px_var(--shadow-light)]",
+          // Violet Bloom 样式
+          "ds-violet:border ds-violet:border-border ds-violet:rounded-xl ds-violet:bg-card ds-violet:text-foreground",
+          "ds-violet:shadow-md ds-violet:hover:shadow-lg ds-violet:hover:shadow-primary/20",
+          // Bubblegum 样式
+          "ds-bubblegum:border-2 ds-bubblegum:border-border ds-bubblegum:rounded-full ds-bubblegum:bg-card ds-bubblegum:text-foreground",
+          "ds-bubblegum:shadow-md ds-bubblegum:hover:shadow-lg ds-bubblegum:hover:scale-105",
+          // Modern Minimal 样式
+          "ds-minimal:border ds-minimal:border-border ds-minimal:rounded-sm ds-minimal:bg-card ds-minimal:text-foreground",
+          "ds-minimal:font-medium ds-minimal:tracking-wide ds-minimal:hover:bg-accent",
+          // Soft Pop 样式
+          "ds-softpop:border ds-softpop:border-border/50 ds-softpop:rounded-2xl ds-softpop:bg-card ds-softpop:text-foreground",
+          "ds-softpop:shadow-sm ds-softpop:hover:shadow-md",
+          // Cosmic Night 样式
+          "ds-cosmic:border ds-cosmic:border-border ds-cosmic:rounded-lg ds-cosmic:bg-card ds-cosmic:text-foreground",
+          "ds-cosmic:shadow-[0_0_10px_var(--primary)] ds-cosmic:hover:shadow-[0_0_15px_var(--primary)]",
+          // Vintage Paper 样式
+          "ds-vintage:border-2 ds-vintage:border-border ds-vintage:rounded-md ds-vintage:bg-card ds-vintage:text-foreground",
+          "ds-vintage:shadow-sm ds-vintage:font-serif ds-vintage:hover:shadow-md",
         )}
       >
         <span className="max-w-[120px] truncate">{current?.name}</span>
@@ -53,7 +71,7 @@ export function DesignSystemSelector() {
       {open && (
         <div
           className={cn(
-            "absolute top-full left-0 mt-2 z-[100] min-w-[240px] overflow-hidden",
+            "absolute top-full right-0 mt-2 z-[100] min-w-[240px] overflow-hidden",
             // Neo Brutalism
             "ds-neo:border-2 ds-neo:border-border ds-neo:bg-card ds-neo:shadow-[4px_4px_0px_0px_var(--foreground)]",
             // Default
@@ -62,6 +80,18 @@ export function DesignSystemSelector() {
             "ds-glass:bg-card/70 ds-glass:backdrop-blur-xl ds-glass:border ds-glass:border-border/50 ds-glass:rounded-2xl ds-glass:shadow-xl",
             // Neumorphism
             "ds-neumorphism:rounded-2xl ds-neumorphism:bg-background ds-neumorphism:shadow-[6px_6px_12px_var(--shadow-dark),-6px_-6px_12px_var(--shadow-light)]",
+            // Violet Bloom
+            "ds-violet:border ds-violet:border-border ds-violet:rounded-2xl ds-violet:bg-card ds-violet:shadow-xl",
+            // Bubblegum
+            "ds-bubblegum:border-2 ds-bubblegum:border-border ds-bubblegum:rounded-3xl ds-bubblegum:bg-card ds-bubblegum:shadow-xl",
+            // Modern Minimal
+            "ds-minimal:border ds-minimal:border-border ds-minimal:rounded-sm ds-minimal:bg-card ds-minimal:shadow-md",
+            // Soft Pop
+            "ds-softpop:border ds-softpop:border-border/50 ds-softpop:rounded-3xl ds-softpop:bg-card ds-softpop:shadow-lg",
+            // Cosmic Night
+            "ds-cosmic:border ds-cosmic:border-border ds-cosmic:rounded-xl ds-cosmic:bg-card ds-cosmic:shadow-[0_0_20px_var(--primary)]",
+            // Vintage Paper
+            "ds-vintage:border-2 ds-vintage:border-border ds-vintage:rounded-lg ds-vintage:bg-card ds-vintage:shadow-lg",
           )}
         >
           {DESIGN_SYSTEMS.map((ds) => (
@@ -84,6 +114,18 @@ export function DesignSystemSelector() {
                 "ds-glass:first:rounded-t-2xl ds-glass:last:rounded-b-2xl",
                 // Neumorphism
                 "ds-neumorphism:first:rounded-t-2xl ds-neumorphism:last:rounded-b-2xl",
+                // Violet Bloom
+                "ds-violet:first:rounded-t-2xl ds-violet:last:rounded-b-2xl",
+                // Bubblegum
+                "ds-bubblegum:first:rounded-t-3xl ds-bubblegum:last:rounded-b-3xl",
+                // Modern Minimal
+                "ds-minimal:first:rounded-t-sm ds-minimal:last:rounded-b-sm",
+                // Soft Pop
+                "ds-softpop:first:rounded-t-3xl ds-softpop:last:rounded-b-3xl",
+                // Cosmic Night
+                "ds-cosmic:first:rounded-t-xl ds-cosmic:last:rounded-b-xl",
+                // Vintage Paper
+                "ds-vintage:first:rounded-t-lg ds-vintage:last:rounded-b-lg",
               )}
             >
               <div className="flex-1 min-w-0">

@@ -17,7 +17,7 @@ const spaceMono = Space_Mono({
 
 export const metadata: Metadata = {
   title: 'Design System Showcase',
-  description: '多风格设计系统组件展示 — Neo Brutalism / Default / Glassmorphism / Neumorphism',
+  description: '多风格设计系统组件展示 — 支持 10 种设计风格无缝切换',
   generator: 'v0.app',
   icons: {
     icon: [

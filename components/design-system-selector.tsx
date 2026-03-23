@@ -3,7 +3,7 @@
 import { useDesignSystem } from "./design-system-provider"
 import { DESIGN_SYSTEMS, type DesignSystem } from "@/lib/design-systems"
 import { ChevronDown, Check } from "lucide-react"
-import { useState, useRef, useEffect } from "react"
+import { useState, useRef, useEffect, useCallback } from "react"
 import { cn } from "@/lib/utils"
 
 export function DesignSystemSelector() {
@@ -13,15 +13,18 @@ export function DesignSystemSelector() {
 
   const current = DESIGN_SYSTEMS.find((ds) => ds.id === designSystem)
 
-  useEffect(() => {
-    function handleClickOutside(e: MouseEvent) {
-      if (ref.current && !ref.current.contains(e.target as Node)) {
-        setOpen(false)
-      }
+  const handleClickOutside = useCallback((e: MouseEvent) => {
+    if (ref.current && !ref.current.contains(e.target as Node)) {
+      setOpen(false)
     }
-    document.addEventListener("mousedown", handleClickOutside)
-    return () => document.removeEventListener("mousedown", handleClickOutside)
   }, [])
+
+  useEffect(() => {
+    if (open) {
+      document.addEventListener("mousedown", handleClickOutside)
+      return () => document.removeEventListener("mousedown", handleClickOutside)
+    }
+  }, [open, handleClickOutside])
 
   return (
     <div ref={ref} className="relative z-50">
@@ -71,7 +74,7 @@ export function DesignSystemSelector() {
       {open && (
         <div
           className={cn(
-            "absolute top-full right-0 mt-2 z-[100] min-w-[240px] overflow-hidden",
+            "absolute top-full right-0 mt-2 z-[100] min-w-[240px] max-h-[70vh] overflow-y-auto overscroll-contain",
             // Neo Brutalism
             "ds-neo:border-2 ds-neo:border-border ds-neo:bg-card ds-neo:shadow-[4px_4px_0px_0px_var(--foreground)]",
             // Default

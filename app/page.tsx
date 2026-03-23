@@ -2,6 +2,7 @@
 
 import { useDesignSystem } from "@/components/design-system-provider"
 import { DesignSystemSelector } from "@/components/design-system-selector"
+import { ThemeToggle } from "@/components/theme-toggle"
 import { ThemedButtonShowcase } from "@/components/themed-button"
 import { ThemedCardShowcase } from "@/components/themed-card"
 import { DESIGN_SYSTEMS } from "@/lib/design-systems"
@@ -69,8 +70,13 @@ function PageContent() {
             </div>
           </div>
 
-          {/* 设计系统选择器 */}
-          <DesignSystemSelector />
+          {/* 右侧控制区 */}
+          <div className="flex items-center gap-2">
+            {/* 主题切换 */}
+            <ThemeToggle />
+            {/* 设计系统选择器 */}
+            <DesignSystemSelector />
+          </div>
         </div>
       </header>
 

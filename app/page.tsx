@@ -1,6 +1,6 @@
 "use client"
 
-import { DesignSystemProvider, useDesignSystem } from "@/components/design-system-provider"
+import { useDesignSystem } from "@/components/design-system-provider"
 import { DesignSystemSelector } from "@/components/design-system-selector"
 import { ThemedButtonShowcase } from "@/components/themed-button"
 import { ThemedCardShowcase } from "@/components/themed-card"
@@ -187,9 +187,5 @@ function PageContent() {
 }
 
 export default function Page() {
-  return (
-    <DesignSystemProvider>
-      <PageContent />
-    </DesignSystemProvider>
-  )
+  return <PageContent />
 }

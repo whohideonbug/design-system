@@ -31,10 +31,6 @@ export function DesignSystemProvider({ children }: { children: React.ReactNode }
     document.documentElement.setAttribute("data-design", newDS)
   }, [])
 
-  if (!mounted) {
-    return <>{children}</>
-  }
-
   return (
     <DesignSystemContext.Provider value={{ designSystem, setDesignSystem }}>
       {children}
